@@ -1,0 +1,22 @@
+
+# ignore some data
+data/prod_data/2_filter_3_mobilenet_train/*    
+data/prod_data/4_filters/*  
+data/prod_data/5_final_model_train/*  
+
+
+# ignore some scripts
+project/1_filter_2/detectron2
+project/1_filter_2/.ipynb_checkpoints
+
+project/3_filter_3_mobilenet_inference/.ipynb_checkpoints
+project/3_filter_3_mobilenet_inference/best_weights
+
+project/4_filters/detectron2
+project/4_filters/.ipynb_checkpoints
+
+project/5_final_model_train/.ipynb_checkpoints
+project/5_final_model_train/best_weights
+
+# utils
+utils/__pycache__

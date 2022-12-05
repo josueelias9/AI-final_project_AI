@@ -1,0 +1,19 @@
+
+version: "3.2"
+
+services:
+  python-app:
+    image: tensorflow/tensorflow:latest-jupyter
+    container_name: tensorflow-container
+    ports:
+      - 8888:8888
+    volumes:
+      - /data/filtering:/tf/josue
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    deploy:          # https://docs.docker.com/compose/gpu-support/#enabling-gpu-access-to-service-containers
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+
